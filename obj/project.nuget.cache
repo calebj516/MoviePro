@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "/1nX7VqWU4Y7O24vnq29OgQnPiQ7uNkSVgMrsst8vgY5FKA9Dzgz+pJt21hf44NJ2d7+JPP348cFSjPf/2F+Eg==",
+  "dgSpecHash": "O0B/tqRk/cSEk4mRf0y4AELZ1NJd9mvCPhZ8WhG68JSUOPSaspOaatneMwUOkPskT4RpP37PLNwtmgNMz8KNmQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\caleb\\Documents\\code\\MoviePro\\MoviePro.csproj",
   "expectedPackageFiles": [
@@ -52,6 +52,8 @@
     "C:\\Users\\caleb\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\caleb\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\newtonsoft.json\\10.0.1\\newtonsoft.json.10.0.1.nupkg.sha512",
+    "C:\\Users\\caleb\\.nuget\\packages\\npgsql\\5.0.10\\npgsql.5.0.10.nupkg.sha512",
+    "C:\\Users\\caleb\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\5.0.10\\npgsql.entityframeworkcore.postgresql.5.0.10.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.collections.concurrent\\4.3.0\\system.collections.concurrent.4.3.0.nupkg.sha512",
