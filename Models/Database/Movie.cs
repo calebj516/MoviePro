@@ -9,7 +9,7 @@ namespace MoviePro.Models.Database
     public class Movie
     {
         public int Id { get; set; }
-        public int MovieId { get; set; } // TMDB Movie Id
+        public int TMDBMovieId { get; set; }
         public string Title { get; set; }
         public string TagLine { get; set; }
         public string Overview { get; set; }
