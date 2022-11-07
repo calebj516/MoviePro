@@ -1,5 +1,3 @@
-C:\Users\caleb\Documents\code\MoviePro\bin\Debug\net5.0\appsettings.Development.json
-C:\Users\caleb\Documents\code\MoviePro\bin\Debug\net5.0\appsettings.json
 C:\Users\caleb\Documents\code\MoviePro\bin\Debug\net5.0\MoviePro.StaticWebAssets.xml
 C:\Users\caleb\Documents\code\MoviePro\bin\Debug\net5.0\MoviePro.exe
 C:\Users\caleb\Documents\code\MoviePro\bin\Debug\net5.0\MoviePro.deps.json

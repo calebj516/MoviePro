@@ -18,7 +18,7 @@
 
     public class DefaultCredentials
     {
-        public string role { get; set; }
+        public string Role { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
     }
