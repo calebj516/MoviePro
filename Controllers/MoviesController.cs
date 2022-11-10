@@ -61,6 +61,13 @@ namespace MoviePro.Controllers
             return RedirectToAction("Import");
         }
 
+        // The Movie Library Action will display a list of all the movies that are currently saved in the database.
+        public async Task<IActionResult> Library()
+        {
+            var movies = await _context.Movie.ToListAsync();
+            return View(movies);
+        }
+
         private async Task AddToMovieCollection(int movieId, string collectionName)
         {
             var collection = await _context.Collection.FirstOrDefaultAsync(c => c.Name == collectionName);
