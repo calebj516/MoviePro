@@ -71,32 +71,6 @@ namespace MoviePro.Controllers
             return View(movies);
         }
 
-        /* From Temp Controller */
-
-        // GET: Temp
-        //public async Task<IActionResult> Index()
-        //{
-        //    return View(await _context.Movie.ToListAsync());
-        //}
-
-        //// GET: Temp/Details/5
-        public async Task<IActionResult> Details(int? id, bool local = false)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var movie = await _context.Movie
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (movie == null)
-            {
-                return NotFound();
-            }
-
-            return View(movie);
-        }
-
         // GET: Temp/Create
         public IActionResult Create()
         {
@@ -229,6 +203,37 @@ namespace MoviePro.Controllers
         private bool MovieExists(int id)
         {
             return _context.Movie.Any(e => e.Id == id);
+        }
+
+        public async Task<IActionResult> Details(int? id, bool local = false)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            Movie movie = new();
+            if (local)
+            {
+                // Get the Movie data from the DB
+                movie = await _context.Movie.Include(m => m.Cast)
+                                            .Include(m => m.Crew)
+                                            .FirstOrDefaultAsync(m => m.Id == id);
+            }
+            else
+            {
+                // Data is coming from the API
+                var movieDetail = await _tmdbMovieService.MovieDetailAsync((int)id);
+                movie = await _tmdbMappingService.MapMovieDetailAsync(movieDetail);
+            }
+
+            if(movie == null)
+            {
+                return NotFound();
+            }
+
+            ViewData["Local"] = local;
+            return View(movie);
         }
 
         private async Task AddToMovieCollection(int movieId, string collectionName)
