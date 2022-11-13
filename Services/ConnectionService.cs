@@ -10,7 +10,7 @@ namespace MoviePro.Services
         // If the Environment Variable, DATABASE_URL is null or empty then we are running locally.
         public static string GetConnectionString(IConfiguration configuration)
         {
-            var connectionString = configuration.GetConnectionString("DefaultConnection");
+            var connectionString = "Server=localhost; Port=5432; Database=MoviePro; User Id=postgres; Password=LearnToCodeNow!";
             var databaseUrl = Environment.GetEnvironmentVariable("DATABASE_URL");
             
             return string.IsNullOrEmpty(databaseUrl) ? connectionString : BuildConnectionString(databaseUrl);

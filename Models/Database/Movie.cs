@@ -36,6 +36,9 @@ namespace MoviePro.Models.Database
         [Display(Name = "Poster Image")]
         public IFormFile PosterFile { get; set; }
 
+        [NotMapped]
+        public IFormFile BackdropFile { get; set; }
+
         public ICollection<MovieCollection> Collections { get; set; } = new HashSet<MovieCollection>(); // A Movie is capable of belonging to any number of movie collections
         public ICollection<MovieCast> Cast { get; set; } = new HashSet<MovieCast>();
         public ICollection<MovieCrew> Crew { get; set; } = new HashSet<MovieCrew>();
