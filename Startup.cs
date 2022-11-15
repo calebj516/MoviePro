@@ -48,6 +48,9 @@ namespace MoviePro
 
             services.AddScoped<IRemoteMovieService, TMDBMovieService>();
             services.AddScoped<IDataMappingService, TMDBMappingService>();
+            //services.AddTransient<IRemoteMovieService, TMDBMovieService>();
+            //services.AddTransient<IDataMappingService, TMDBMappingService>();
+
             services.AddSingleton<IImageService, BasicImageService>();
         }
 
